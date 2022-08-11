@@ -108,6 +108,35 @@ Recall  | 0.7451883
 
 3.1 Random Forest   <a class="anchor" id="Random_Forest"></a>
 
+Random forest model is based on, as the name implies, trees. Hundreds of trees is created (hence forest) and predictions is made based on majority of the trees.
+Train-test data is split by 0.6 and 0.4.
+
+![image](https://user-images.githubusercontent.com/50465232/184252798-008b3e53-d381-48ad-89f3-d83d0642f421.png)
+![image](https://user-images.githubusercontent.com/50465232/184252809-a07331c5-65b1-4bab-824d-d9ddd4a847db.png)
+
+To create random forest model, “randomForest” library has been used. After trained the model with train data, the results and confusion matrix have been printed. “Caret” library has been used to get the confusion matrix.
+
+Type of Random Forest| Classification
+| :--- | ---: 
+Number of Trees  | 500
+No. of variables tried at each split | 1
+OOB estimate of error rate   | 0.23%
+
+
+Predict / Real Values| 1 | 2
+| :--- | ---: | :---:
+1  | 5929 | 36
+2  | 7 | 14606
+
+After the model has plotted, we observe that error rate for the model does not change after 100 iterations. Ratios for test dataset have given below.
+
+
+| :--- | ---: 
+Accuracy  | 0.9979104
+Precision  | 0.9939648
+Recall  | 0.9988208
+
+
 
 
 
