@@ -9,8 +9,8 @@ A project to predict whether spesific R, G and B pixel values belong to human sk
    * [Missing Values](#Missing_Values)
    * [Duplicated Rows](#Duplicated_Rows)
 * [Models](#Models) 
-   * [Decision Tree Model](#Decision_Tree_Model)
-   * [KNN Model](#KNN_Model)
+   * [Naive Bayes](#Naive_Bayes)
+   * [Random Forest](#Random_Forest)
 * [CONCLUSION](#CONCLUSION)
 
 
@@ -97,6 +97,16 @@ Accuracy  | 0.8905686
 Precision  | 0.782779
 Recall  | 0.8528181
 
+Results for kernel-free model has given below.
+
+Name of Measure| Mean Ratio
+| :--- | ---: 
+Accuracy  | 0.8697284
+Precision  | 0.7866183
+Recall  | 0.7451883
+
+
+3.1 Random Forest   <a class="anchor" id="Random_Forest "></a>
 
 
 
