@@ -15,6 +15,7 @@ A project to predict whether spesific R, G and B pixel values belong to human sk
 * [CONCLUSION](#CONCLUSION)
 
 
+# Introduction <a class="anchor" id="Introduction"></a>
 
 A color image consists of 3 different colors: red, green, and blue. All other colors created by intensities of these 3 colors. The dataset contains 3 descriptive features, R, G, and B. The target feature is 0 or 1, indicates that whether the pixel belongs to a human skin or not.
 
