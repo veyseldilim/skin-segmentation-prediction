@@ -11,7 +11,8 @@ A project to predict whether spesific R, G and B pixel values belong to human sk
 * [Models](#Models) 
    * [Naive Bayes](#Naive_Bayes)
    * [Random Forest](#Random_Forest)
-* [CONCLUSION](#CONCLUSION)
+   * [Decision Tree](#Decision_Tree)
+
 
 
 # Introduction <a class="anchor" id="Introduction"></a>
@@ -106,7 +107,7 @@ Precision  | 0.7866183
 Recall  | 0.7451883
 
 
-3.1 Random Forest   <a class="anchor" id="Random_Forest"></a>
+3.2 Random Forest   <a class="anchor" id="Random_Forest"></a>
 
 Random forest model is based on, as the name implies, trees. Hundreds of trees is created (hence forest) and predictions is made based on majority of the trees.
 Train-test data is split by 0.6 and 0.4.
@@ -137,6 +138,68 @@ Accuracy  | 0.9979104
 Precision  | 0.9939648
 Recall  | 0.9988208
 
+
+The success of the model is high but also the cost (resources and time) is very high too.
+To decrease the cost, model parameters can be changed. The plot of random forest model has given below.
+
+![image](https://user-images.githubusercontent.com/50465232/184253924-396fd161-7caf-4bb0-ae25-c8b501cac484.png)
+
+It can be observed that after created more than 100 trees, the error rate does not change much.
+Also, with tuneRF function, we observe that OOB error is lowest when mtry = 2
+
+![image](https://user-images.githubusercontent.com/50465232/184253949-49d61cb9-d985-4451-a7a1-b5b2cacd1aac.png)
+
+After created a new random forest model with these parameters, we get the following result for test data.
+
+Name of Measure| Mean Ratio
+------------- | -------------
+Accuracy  | 0.9973272
+Precision  | 0.9942848
+Recall  | 0.9964623
+
+Ratios are almost equal but the cost is reduced.
+
+By using random forest model, we can easily plot importance of descriptive features.
+
+![image](https://user-images.githubusercontent.com/50465232/184254065-514a3d5e-59b0-4b04-9935-dd2234efef16.png)
+
+The first plot (Mean Decrease Accuracy) tests how worse the model performs without each of the variable. As observed before, R descriptive feature has the highest information gain.
+The second plot (Main Decrease Gini) measures how pure the nodes are at the end of the tree without each variable.
+The results of cross validation have given in the table below.
+
+Name of Measure| Mean Ratio
+------------- | -------------
+Accuracy  | 0.9975935
+Precision  | 0.9936338
+Recall  | 0.997938
+
+
+
+3.3 Decision Tree   <a class="anchor" id="Decision_Tree"></a>
+
+Decision tree is based on partitioning the dataset by descriptive feature that has highest information gain. The dataset has split as before.
+![image](https://user-images.githubusercontent.com/50465232/184256715-8a5aeaad-2447-49dd-966f-4c4cfc26da38.png)
+![image](https://user-images.githubusercontent.com/50465232/184256723-ff68bda5-d270-41ae-9e08-44b3a2a1ef88.png)
+
+“Party” library has been used to develop decision tree model. The plot of the tree has given below.
+
+![image](https://user-images.githubusercontent.com/50465232/184256739-1f47ac17-45cf-41c9-8f7a-ee237b55b4e9.png)
+
+The results of model on test data has given below.
+
+Name of Measure| Mean Ratio
+------------- | -------------
+Accuracy  | 0.9921761
+Precision  | 0.9853567
+Recall  | 0.9872057
+
+The results of cross validation have given in the table below.
+
+Name of Measure| Mean Ratio
+------------- | -------------
+Accuracy  | 0.9833569
+Precision  | 0.9593341
+Recall  | 0.9883135
 
 
 
