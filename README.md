@@ -55,7 +55,7 @@ The dataset does not contain any missing values.
 
 # Models <a class="anchor" id="Models"></a>
 
-3.1 Naive Bayes   <a class="anchor" id="Naive_Bayes "></a>
+3.1 Naive Bayes   <a class="anchor" id="Naive_Bayes"></a>
 
 Naïve Bayes model is based on probability. The highest probability for target feature is accepted.
 0.6% of the rows has been selected as train whereas other rows selected as test. 
@@ -106,7 +106,7 @@ Precision  | 0.7866183
 Recall  | 0.7451883
 
 
-3.1 Random Forest   <a class="anchor" id="Random_Forest "></a>
+3.1 Random Forest   <a class="anchor" id="Random_Forest"></a>
 
 
 
