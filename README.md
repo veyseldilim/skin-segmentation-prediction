@@ -131,7 +131,8 @@ Predict / Real Values| 1 | 2
 After the model has plotted, we observe that error rate for the model does not change after 100 iterations. Ratios for test dataset have given below.
 
 
-
+ | 
+| :--- | ---:
 Accuracy  | 0.9979104
 Precision  | 0.9939648
 Recall  | 0.9988208
