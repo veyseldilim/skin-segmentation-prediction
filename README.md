@@ -65,5 +65,42 @@ Since numerical variables are not normally distributed, kernel has been used to 
 In both train and test dataset, Skin and Nonskin ratio is very close. For this reason, undersampling or oversampling methods has not been used since they drop the accuracy, recall and precision ratios. 
 
 To train the model, “naivebayes” library has been used. 
+![image](https://user-images.githubusercontent.com/50465232/184251661-ccda549c-9b64-4925-b73d-d6bb0776fc42.png)
+![image](https://user-images.githubusercontent.com/50465232/184251673-689645d4-859f-4cea-9cd8-640af0fd1eaa.png)
+![image](https://user-images.githubusercontent.com/50465232/184251686-a63d37a0-e968-4a57-a1d3-2608276a02a3.png)
+
+The plots for each descriptive feature have given above. By looking these plots, we can say that R is the most informative descriptive feature. 
+The success of the model has given in the table below. 
+
+Predict / Real Values| 1 | 2
+| :--- | ---: | :---:
+1  | 6786 | 1840
+2  | 1285 | 18290
+
+Accuracy ratio = 0.8870153
+This means the model’s prediction is true for ~%89 of the time.
+Precision ratio = 0.7777603
+Our model has a precision of ~0.78-in other words, when it predicts a pixel is skin, it is correct ~78% of the time.
+Recall ratio = 0.8438141
+The model has a recall of 0.84-in other words, it correctly identifies 84% of all pixel skins.
+To analyze our model success with different data samples, cross validation has been applied.
+The ratio plots have given below for 100 iterations.
+
+![image](https://user-images.githubusercontent.com/50465232/184251935-22cee58a-3201-401e-8bd0-895cd6679831.png)
+![image](https://user-images.githubusercontent.com/50465232/184251950-87b2e41b-08c0-4609-906e-0ccb7f7e7806.png)
+![image](https://user-images.githubusercontent.com/50465232/184251955-5fb5fced-180c-48f8-819a-819944baa953.png)
+
+
+Name of Measure| Mean Ratio
+| :--- | ---: 
+Accuracy  | 0.8905686
+Precision  | 0.782779
+Recall  | 0.8528181
+
+
+
+
+
+
 
 
